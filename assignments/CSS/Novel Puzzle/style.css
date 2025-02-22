@@ -1,9 +1,52 @@
+.first::first-letter {
+    font-size: 80px;
+    font-family: "Georgia", serif;
+    font-weight: bold;
+    float: left;
+    line-height: 1;
+    margin-left: 10px;
 
-p::first-letter {
-    
-    font-size: 80px; 
-    font-weight: bold; 
-    float: left; 
-    margin-right: 10px; 
-    font-family: "Georgia", serif; 
+}
+
+span {
+    text-transform: uppercase;
+}
+
+.second {
+    background-image: url(images/img2.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-family: 'Haettenschweiler' 'Impact' 'Segoe UI Black' sans-serif;
+
+}
+
+.second::first-letter {
+    font-size: 80px;
+    text-decoration: underline red;
+    text-align: right;
+
+}
+
+.second-word {
+    font-weight: bold;
+}
+
+.third {
+    background-image: url(images/img2.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-family: 'Haettenschweiler' 'Impact' 'Segoe UI Black' sans-serif;
+    height: auto;
+    background-clip: padding-box;
+}
+
+.third::first-letter {
+    font-size: 80px;
+    text-decoration: underline red;
+    float: left;
+    margin-right: 10px;
+}
+
+.third-word {
+    font-weight: bold;
 }
