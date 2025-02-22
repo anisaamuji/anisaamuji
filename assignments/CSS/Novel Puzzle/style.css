@@ -1,0 +1,9 @@
+
+p::first-letter {
+    
+    font-size: 80px; 
+    font-weight: bold; 
+    float: left; 
+    margin-right: 10px; 
+    font-family: "Georgia", serif; 
+}

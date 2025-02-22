@@ -1,0 +1,19 @@
+h1{
+    color: black;
+    background: linear-gradient(to left,#3C1518,#69140E,#A44200,#D58936,#FFFB46);
+}
+ul{
+    color: rgb(60, 21, 24);
+    background-color: rgba(60, 21, 24, 0.297);
+    
+}
+body{
+    background-image: url("Images/img.avif");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+p{
+    background-color: rgba(105, 20, 14, 0.733);
+    color: black;
+    background: linear-gradient(to left,#69140E,#A44200,#D58936,#FFFB46);
+}
