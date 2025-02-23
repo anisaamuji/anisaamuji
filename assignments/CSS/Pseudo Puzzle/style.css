@@ -2,8 +2,6 @@ p:hover {
     background-color: pink;
   }
   
-  
-  
   p:hover::first-letter {
-    font-size: 3em;
+    font-size:400px;
   }
