@@ -1,11 +1,22 @@
 .first::first-letter {
-    font-size: 80px;
-    font-family: "Georgia", serif;
+    font-size: 100px;
+    text-indent: 30px;
     font-weight: bold;
     float: left;
     line-height: 1;
-    margin-left: 10px;
-
+    margin-right: 10px;
+    position: relative;
+    top: 8px;
+}
+.first{
+    margin: auto;
+    line-height: 1.6;
+    text-align: justify;
+    font-family: "Georgia", serif;
+    
+}
+.first-word{
+    letter-spacing: 2px;
 }
 
 span {
@@ -31,22 +42,21 @@ span {
     font-weight: bold;
 }
 
-.third {
+.third{
     background-image: url(images/img2.jpg);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 325px;
     font-family: 'Haettenschweiler' 'Impact' 'Segoe UI Black' sans-serif;
-    height: auto;
-    background-clip: padding-box;
 }
-
-.third::first-letter {
+.third-word{
+    font-weight: bold;
+}
+.third::first-letter{
+    text-decoration: underline red; 
     font-size: 80px;
-    text-decoration: underline red;
+    letter-spacing: 3px;
     float: left;
     margin-right: 10px;
-}
-
-.third-word {
-    font-weight: bold;
+    
+    
 }
