@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding:0;
+}
+
+div {
+    height: 25vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.first {
+    background-color: rgb(61, 61, 61);
+    color: white;
+}
+
+.second {
+    background-color: rgb(253, 253, 226);
+    color: black;
+
+}
+
+.underline {
+    border: none;
+    border-top: 3px solid red;
+    width: 33%;
+
+}
+
+.first-word {
+    text-decoration: underline white;
+}
+
+.first-wordd {
+    text-decoration: underline black;
+}
