@@ -1,7 +1,9 @@
 h1{
-    display: block;
+    display: inline;
+    
 }
-
 p{
-    display: inline-flex;
+    display: inline;
+    text-align: justify; 
+    
 }
