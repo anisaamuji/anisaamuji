@@ -1,0 +1,223 @@
+body {
+    background-image: url(images/download.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Poppins', sans-serif;
+    margin: 1em 10% 0 10%;
+    padding: 0;
+    color: black;
+    cursor: url(images/favicon-32x32.png),auto; 
+}
+.heading1 {
+    text-align: center;
+}
+nav ul li{
+    background-color: rgb(253, 249, 126);
+    display: inline;
+    position: relative;
+    right: -345px;
+}
+button{
+    background-color: rgb(253, 249, 126);
+}
+nav li :hover {
+    background-color: #ffeaab;
+}
+section:hover {
+    border: 2px solid black;
+    background-color: #D2B48C;
+}
+.anisa-muji {
+    background-color: #fcf75e;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding-top: 2px;
+}
+.education {
+    background-color: rgb(251, 247, 100);
+    border-radius: 10px;
+    margin-top: 20px;
+    padding-top: 2px;
+    padding-right: 10px;
+}
+.subheading {
+    text-align: center;
+}
+.primary {
+    background-color: #e8d59c;
+    border-radius: 10px;
+    list-style-type: none;
+    margin: 10px;
+    padding: 5px;
+    text-align: left;
+    margin-right: 44px;
+}
+.secondary {
+    background-color: #e8d59c;
+    border-radius: 10px;
+    list-style-type: none;
+    margin: 10px;
+    padding: 5px;
+    text-align: left;
+    margin-right: 44px;
+}
+.courses {
+    background-color: #e8d59c;
+    border-radius: 10px;
+    list-style-type: none;
+    margin: 10px;
+    padding: 5px;
+    text-align: left;
+    margin-right: 44px;
+}
+.education li {
+    list-style: none;
+}
+.skills {
+    background-color: rgb(253, 249, 126);
+    text-align: center;
+    border-radius: 10px;
+    border-collapse: collapse;
+    margin-right: 0px;
+    margin-top: 20px;
+    padding-top: 2px;
+}
+table {
+    margin-left: 20px;
+}
+th {
+    background-color: yellow;
+}
+td {
+    background-color: rgb(251, 247, 100);
+}
+.my-projects {
+    background-color: #fdfa9e;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    position: relative;
+    top: 10px;
+}
+.q1,
+.q2,
+.q3{
+   background-color: wheat;
+   position: relative;
+   top: 2px;
+   bottom: 2px;
+   right: -10px;
+}
+#a1,#a2,#a3 {
+    text-align: center;
+}
+.next {
+    background-color: #e8d59c;
+    color: white;
+    margin-top: 20px;
+    padding-top: 2px;
+    padding: 5px;
+    position: relative;
+    right: -10px;
+    top: -5px;
+}
+.math-project {
+    background-color: #fcf75e;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding-top: 2px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.geography-project {
+    background-color: rgb(253, 249, 126);
+    border-radius: 10px;
+    margin-top: 20px;
+    padding-top: 2px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.chemistry-project {
+    background-color: #fdfa9e;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding-top: 2px;
+}
+.container {
+    position: relative;
+    right: -10px;
+}
+.math-geo {
+    position: relative;
+    top: -10px;
+}
+.button1 {
+    background-color: rgb(255, 216, 20);
+    color: black;
+    border: none;
+    height: 36px;
+    width: 105px;
+    border-radius:18px ;
+    cursor: pointer;
+    margin-left: 8px;
+}
+.button2 {
+    background-color: rgb(255, 216, 20);
+    color: black;
+    border: none;
+    height: 36px;
+    width: 105px;
+    border-radius:18px ;
+    cursor: pointer;
+    margin-left: 8px;
+}
+.button1,.button2{
+    position: relative;
+    top: -10px;
+}
+.send-message {
+    background-color: #fcf75e;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding-top: 2px;
+}
+.form {
+    margin-left: 20px;
+}
+.connect {
+    background-color: rgb(253, 249, 126);
+    border-radius: 10px;
+    margin-top: 20px;
+    padding-top: 2px;
+}
+.icons {
+    margin-left: 20px;
+}
+.button {
+    background-color: #D2B48C;
+    position: relative;
+    top: -10px;
+}
+.button:hover {
+    background-color: #fcf75e;
+}
+.contact{
+    background-color: #ffeaab;
+    border-radius: 50%;
+    height: 30px;
+    width: 40px;
+}
+.contactt{
+    background-color: #ffeaab;
+    border-radius: 50%;
+    height: 30px;
+    width: 40px;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #e8d59c;
+    color: black;
+    margin-top: 20px;
+    font-weight: bolder;
+}
