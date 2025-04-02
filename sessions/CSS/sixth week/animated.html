@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            background-color: gray;
+            padding: 20px;
+        }
+
+        input {
+            width: 400px;
+            height: 30px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        span {
+            opacity: 0;
+            padding: 5px;
+        }
+
+        #name:focus+.enter-name {
+            opacity: 1;
+            transform: translateY(-1px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+
+
+        }
+
+        #surname:focus+.enter-surname {
+            opacity: 1;
+            transform: translateY(-5px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        #email:focus+.enter-email {
+            opacity: 1;
+            transform: translateY(-5px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        .flex {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .loader {
+            width: 30px;
+            height: 30px;
+            border: 5px solid blue;
+            border-bottom-color: white;
+            border-radius: 50%;
+            display: inline-block;
+            box-sizing: border-box;
+            animation: rotation 1s linear infinite;
+        }
+
+        @keyframes rotation {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form">
+        <form action="submit">
+            <input type="text" id="name" placeholder="Name">
+            <span class="enter-name">*Enter Name</span>
+            <input type="text" id="surname" placeholder="Surname">
+            <span class="enter-surname">*Enter Surname</span>
+            <input type="email" id="email" placeholder="Email">
+            <span class="enter-email">*Enter Email</span>
+        </form>
+       <div class="flex">
+                <button>Submit</button>
+                <span class="loader"></span>
+            </div>
+    </div>
+</body>
+
+</html>
