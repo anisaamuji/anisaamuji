@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    </link>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </link>
+    <link rel="stylesheet" href="style.css">
+    </link>
+    <title>CP CoolPage</title>
+    <style>
+        body {
+            font-family: var(--font-family);
+            background-color: var(--color-secondary);
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+
+        :root {
+            --color-primary: grey;
+            --color-secondary: white;
+            --color-terciary: red;
+            --font-family: 'Roboto', sans-serif;
+            --font-title-size: 20px;
+            --font-size: 10px;
+        }
+
+        .dark {
+            font-size: var(--font-size);
+            color: black;
+        }
+
+        .light {
+            font-size: var(--font-size);
+            color: rgb(129, 129, 129);
+        }
+        aside {
+            height: 100vh;
+            overflow-y: scroll;
+            width: 300px;
+            padding: 15px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/sidebar-1.jpg);
+            background-size: cover;
+            cursor: pointer;
+            color: var(--color-secondary);
+        }
+
+        .bg-title {
+            font-size: var(--font-title-size);
+            padding-left: 10px;
+        }
+
+        .bg-title-span {
+            padding-left: 30px;
+        }
+
+        img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            padding-left: 10px;
+        }
+
+        .user-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .user-left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .menu-icon {
+            background-color: var(--color-terciary);
+            border-radius: 3px;
+            padding-left: 10px;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 10px;
+            margin-top: 5px;
+            font-size: 15px;
+        }
+
+        .menu-item:hover {
+            background-color: var(--color-primary);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .aside-icons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .grid-layout {
+                grid-template-columns: 1fr;
+                grid-template-rows: 60px auto auto;
+                grid-template-areas:
+                    "navbar"
+                    "sidebar"
+                    "main";
+            }
+
+            aside {
+                height: auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            aside {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 10px;
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-layout">
+        
+        <aside>
+            <div class="sidebar-1">
+                <div>
+                    <p class="bg-title">CP<span class="bg-title-span">COOL PAGE</span></p>
+                    <hr>
+                    <div class="user-info">
+                        <div class="user-left">
+                            <img src="images/avatar.jpg" alt="">
+                            <p class="profile-name">John Doe</p>
+                        </div>
+                        <span class="material-icons">
+                            expand_more
+                        </span>
+                    </div>
+                    <hr>
+                </div>
+                <div class="menu-icon">
+                    <span class="material-icons">
+                        dashboard
+                    </span>
+                    <p>Dashboard</p>
+                </div>
+                <div class="menu-item">
+                    <div class="aside-icons">
+                        <span class="material-icons">
+                            image
+                        </span>
+                        <p>Pages</p>
+                    </div>
+                    <span class="material-icons">
+                        expand_more
+                    </span>
+                </div>
+                <div class="menu-item">
+                    <div class="aside-icons">
+                        <span class="material-icons">
+                            apps
+                        </span>
+                        <p>Components</p>
+                    </div>
+                    <span class="material-icons">
+                        expand_more
+                    </span>
+                </div>
+                <div class="menu-item">
+                    <div class="aside-icons">
+                        <span class="material-icons">
+                            content_paste
+                        </span>
+                        <p>Forms</p>
+                    </div>
+                    <span class="material-icons">
+                        expand_more
+                    </span>
+                </div>
+                <div class="menu-item">
+                    <div class="aside-icons">
+                        <span class="material-icons">
+                            grid_on
+                        </span>
+                        <p>Tables</p>
+                    </div>
+                    <span class="material-icons">
+                        expand_more
+                    </span>
+                </div>
+                <div class="menu-item">
+                    <div class="aside-icons">
+                        <span class="material-icons">
+                            location_on
+                        </span>
+                        <p>Maps</p>
+                    </div>
+                    <span class="material-icons">
+                        expand_more
+                    </span>
+                </div>
+                <div class="menu-item">
+                    <div class="aside-icons">
+                        <span class="material-icons">
+                            widgets
+                        </span>
+                        <p>Widgets</p>
+                    </div>
+                    <span class="material-icons">
+                        expand_more
+                    </span>
+                </div>
+                <div class="menu-item">
+                    <div class="aside-icons">
+                        <span class="material-icons">
+                            timeline
+                        </span>
+                        <p>Charts</p>
+                    </div>
+                    <span class="material-icons">
+                        expand_more
+                    </span>
+                </div>
+                <div class="menu-item">
+                    <div class="aside-icons">
+                        <span class="material-icons">
+                            date_range
+                        </span>
+                        <p>Calendar</p>
+                    </div>
+                    <span class="material-icons">
+                        expand_more
+                    </span>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+</body>
+
+</html>

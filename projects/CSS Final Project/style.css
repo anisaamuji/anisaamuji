@@ -1,0 +1,60 @@
+body{
+    font-family: 'Roboto',sans-serif;
+    background-color: white !important;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+<div>
+                <span class="material-icons">
+                    dashboard
+                </span>
+                <p>Dashboard</p>
+                <span class="material-icons">
+                    expand_more
+                </span>
+            </div>
+
+            header,footer,main{
+                display: grid;
+                grid-template-rows: auto 1fr auto;
+            }
+            header{
+                padding: 10px;
+                background-color: var(--color-primary);
+    
+            }
+            main{
+                background-color: var(--color-primary);
+                padding: 10px;
+                overflow-y: scroll;
+            }
+            footer{
+                background-color: var(--color-primary);
+                padding: 10px;
+            }
+            <header>
+            <div>
+                <span class="material-icons">
+                    more_vert
+                </span>
+                <p>Dashboard</p>
+            </div>
+            <div>
+                <p>Search</p>
+                <span class="material-icons">
+                    search
+                </span>
+                <span class="material-icons">
+                    dashboard
+                </span>
+                <span class="material-icons">
+                    notifications
+                </span>
+                <span class="material-icons">
+                    person
+                </span>
+            </div>
+
+        </header>
