@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    font-family: sans-serif;
+  }
+  
+  /* Layout container */
+  .layout {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Sidebar fixed */
+  .sidebar {
+    width: 220px;
+    background: #2c3e50;
+    color: white;
+    padding: 20px;
+    flex-shrink: 0;
+    /* Nuk ka scroll fare këtu */
+  }
+  
+  /* Zona tjetër që scrollon */
+  .main-area {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow: hidden;
+  }
+  
+  /* Header & Footer nuk scrollohen vetë */
+  .header, .footer {
+    padding: 15px;
+    background: #f0f0f0;
+    flex-shrink: 0;
+  }
+  
+  /* Vetëm kjo scrollon */
+  .main {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 20px;
+    background: #ffffff;
+  }
+  </style>      
+</head>
+<body>
+    <div class="layout">
+    <aside class="sidebar">
+      <!-- Sidebar content -->
+      Sidebar
+    </aside>
+  
+    <div class="main-area">
+      <header class="header">Header</header>
+      <main class="main">Përmbajtja kryesore që do të bëhet scroll nëse është gjatë</main>
+      <footer class="footer">Footer</footer>
+    </div>
+  </div>
+</body>
+</html>
+  

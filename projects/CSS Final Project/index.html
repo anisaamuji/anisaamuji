@@ -11,246 +11,446 @@
     <link rel="stylesheet" href="style.css">
     </link>
     <title>CP CoolPage</title>
-    <style>
-        body {
-            font-family: var(--font-family);
-            background-color: var(--color-secondary);
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-        }
-
-        :root {
-            --color-primary: grey;
-            --color-secondary: white;
-            --color-terciary: red;
-            --font-family: 'Roboto', sans-serif;
-            --font-title-size: 20px;
-            --font-size: 10px;
-        }
-
-        .dark {
-            font-size: var(--font-size);
-            color: black;
-        }
-
-        .light {
-            font-size: var(--font-size);
-            color: rgb(129, 129, 129);
-        }
-        aside {
-            height: 100vh;
-            overflow-y: scroll;
-            width: 300px;
-            padding: 15px;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/sidebar-1.jpg);
-            background-size: cover;
-            cursor: pointer;
-            color: var(--color-secondary);
-        }
-
-        .bg-title {
-            font-size: var(--font-title-size);
-            padding-left: 10px;
-        }
-
-        .bg-title-span {
-            padding-left: 30px;
-        }
-
-        img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            padding-left: 10px;
-        }
-
-        .user-info {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .user-left {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .menu-icon {
-            background-color: var(--color-terciary);
-            border-radius: 3px;
-            padding-left: 10px;
-            margin-top: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .menu-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-left: 10px;
-            margin-top: 5px;
-            font-size: 15px;
-        }
-
-        .menu-item:hover {
-            background-color: var(--color-primary);
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
-
-        .aside-icons {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        @media (max-width: 768px) {
-            .grid-layout {
-                grid-template-columns: 1fr;
-                grid-template-rows: 60px auto auto;
-                grid-template-areas:
-                    "navbar"
-                    "sidebar"
-                    "main";
-            }
-
-            aside {
-                height: auto;
-            }
-        }
-
-        @media (max-width: 480px) {
-            aside {
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 10px;
-            }
-
-            .card-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
 </head>
 
 <body>
-    <div class="grid-layout">
-        
-        <aside>
-            <div class="sidebar-1">
-                <div>
-                    <p class="bg-title">CP<span class="bg-title-span">COOL PAGE</span></p>
-                    <hr>
-                    <div class="user-info">
-                        <div class="user-left">
-                            <img src="images/avatar.jpg" alt="">
-                            <p class="profile-name">John Doe</p>
+    <div class="grid-container">
+        <div class="sidebar-layout">
+
+            <aside>
+                <div class="sidebar-1">
+                    <div>
+                        <p class="bg-title">CP<span class="bg-title-span">COOL PAGE</span></p>
+                        <hr>
+                        <div class="user-info">
+                            <div class="user-left">
+                                <img src="images/avatar.jpg" alt="">
+                                <p class="profile-name">John Doe</p>
+                            </div>
+                            <span class="material-icons">
+                                expand_more
+                            </span>
                         </div>
+                        <hr>
+                    </div>
+                    <div class="menu-icon">
                         <span class="material-icons">
+                            dashboard
+                        </span>Dashboard
+                    </div>
+                    <div class="menu-item">
+                        <div class="aside-icons">
+                            <span class="material-icons">
+                                image
+                            </span>Pages
+                        </div>
+                        <span class="material-icons expand">
                             expand_more
                         </span>
                     </div>
-                    <hr>
-                </div>
-                <div class="menu-icon">
-                    <span class="material-icons">
-                        dashboard
-                    </span>
-                    <p>Dashboard</p>
-                </div>
-                <div class="menu-item">
-                    <div class="aside-icons">
-                        <span class="material-icons">
-                            image
+                    <div class="menu-item">
+                        <div class="aside-icons">
+                            <span class="material-icons">
+                                apps
+                            </span>Components
+                        </div>
+                        <span class="material-icons expand">
+                            expand_more
                         </span>
-                        <p>Pages</p>
                     </div>
-                    <span class="material-icons">
-                        expand_more
-                    </span>
-                </div>
-                <div class="menu-item">
-                    <div class="aside-icons">
-                        <span class="material-icons">
-                            apps
+                    <div class="menu-item">
+                        <div class="aside-icons">
+                            <span class="material-icons">
+                                content_paste
+                            </span>Forms
+                        </div>
+                        <span class="material-icons expand">
+                            expand_more
                         </span>
-                        <p>Components</p>
                     </div>
-                    <span class="material-icons">
-                        expand_more
-                    </span>
-                </div>
-                <div class="menu-item">
-                    <div class="aside-icons">
-                        <span class="material-icons">
-                            content_paste
+                    <div class="menu-item">
+                        <div class="aside-icons">
+                            <span class="material-icons">
+                                grid_on
+                            </span>Tables
+                        </div>
+                        <span class="material-icons expand">
+                            expand_more
                         </span>
-                        <p>Forms</p>
                     </div>
-                    <span class="material-icons">
-                        expand_more
-                    </span>
-                </div>
-                <div class="menu-item">
-                    <div class="aside-icons">
-                        <span class="material-icons">
-                            grid_on
+                    <div class="menu-item">
+                        <div class="aside-icons">
+                            <span class="material-icons">
+                                location_on
+                            </span>Maps
+                        </div>
+                        <span class="material-icons expand">
+                            expand_more
                         </span>
-                        <p>Tables</p>
                     </div>
-                    <span class="material-icons">
-                        expand_more
-                    </span>
-                </div>
-                <div class="menu-item">
-                    <div class="aside-icons">
-                        <span class="material-icons">
-                            location_on
+                    <div class="menu-item">
+                        <div class="aside-icons">
+                            <span class="material-icons">
+                                widgets
+                            </span>Widgets
+                        </div>
+                        <span class="material-icons expand">
+                            expand_more
                         </span>
-                        <p>Maps</p>
                     </div>
-                    <span class="material-icons">
-                        expand_more
-                    </span>
-                </div>
-                <div class="menu-item">
-                    <div class="aside-icons">
-                        <span class="material-icons">
-                            widgets
+                    <div class="menu-item">
+                        <div class="aside-icons">
+                            <span class="material-icons">
+                                timeline
+                            </span>Charts
+                        </div>
+                        <span class="material-icons expand">
+                            expand_more
                         </span>
-                        <p>Widgets</p>
                     </div>
-                    <span class="material-icons">
-                        expand_more
-                    </span>
-                </div>
-                <div class="menu-item">
-                    <div class="aside-icons">
-                        <span class="material-icons">
-                            timeline
+                    <div class="menu-item item-end">
+                        <div class="aside-icons">
+                            <span class="material-icons">
+                                date_range
+                            </span>Calendar
+                        </div>
+                        <span class="material-icons expand">
+                            expand_more
                         </span>
-                        <p>Charts</p>
                     </div>
-                    <span class="material-icons">
-                        expand_more
-                    </span>
                 </div>
-                <div class="menu-item">
-                    <div class="aside-icons">
-                        <span class="material-icons">
-                            date_range
-                        </span>
-                        <p>Calendar</p>
+            </aside>
+        </div>
+        <div class="main-area">
+            <div class="header-layout">
+                <header>
+                    <div class="left-header">
+                        <div class="tooltip">
+                            <span class="material-icons light" id="dashboard-icon">
+                                more_vert
+                            </span>
+                            <span class="custom-tooltip see-more">See More</span>
+                        </div>
+
+                        <p class="dark">Dashboard</p>
                     </div>
-                    <span class="material-icons">
-                        expand_more
-                    </span>
-                </div>
+                    <div class="right-header">
+                        <div class="search-box">
+                            <input type="text" placeholder="Search">
+                            <div class="tooltip"><span class="material-icons light" id="search-icon">
+                                    search
+                                </span><span class="custom-tooltip">Search</span>
+                            </div>
+
+                        </div>
+                        <div class="tooltip">
+                            <span class="material-icons more-dark">
+                                dashboard
+                            </span>
+
+                            <span class="custom-tooltip">Dashboard</span>
+                        </div>
+                        <div class="tooltip notification-wrapper">
+                            <span class="material-icons more-dark bell">
+                                notifications
+                            </span><span class="notifications">5</span>
+
+                            <span class="custom-tooltip notification">Notifications</span>
+                            <span class="display">
+                                <p class="p-display">John Doe sent a message</p>
+                                <p class="p-display">Someone viewed your profile</p>
+                                <p class="p-display">John Doe sent a message</p>
+                                <p class="p-display">Someone viewed your profile</p>
+                                <p class="p-display">Another notification</p>
+                            </span>
+
+
+                        </div>
+                        <div class="tooltip">
+                            <span class="material-icons more-dark">
+                                person
+                            </span>
+                            <span class="custom-tooltip">Profile</span>
+                        </div>
+
+
+                    </div>
+                </header>
             </div>
-        </aside>
+            <main>
+                <div class="global-card">
+                    <div class="card-header">
+                        <span class="material-icons global ">
+                            language
+                        </span>
+                        <p>Global Sales by Top Locations</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="locations">
+                            <table>
+                                <tr>
+                                    <td><img src="images/usa.png" alt="" class="table-img"> USA</td>
+                                    <td>2,920</td>
+                                    <td>53.23%</td>
+                                </tr>
+                                <tr>
+                                    <td> <img src="images/germany.png" alt="" class="table-img">Germany</td>
+                                    <td>1,300</td>
+                                    <td>4.34%</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="images/as.png" alt="" class="table-img">Australia</td>
+                                    <td>760</td>
+                                    <td>20.43%</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="images/uk.png" alt="" class="table-img">United Kingdom</td>
+                                    <td>690</td>
+                                    <td>10.35%</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="images/romania.png" alt="" class="table-img">Romania</td>
+                                    <td>600</td>
+                                    <td>7.87%</td>
+                                </tr>
+                                <tr>
+                                    <td> <img src="images/brasil.png" alt="" class="table-img">Brazil</td>
+                                    <td>550</td>
+                                    <td>5.94%</td>
+                                </tr>
+                            </table>
+
+
+                        </div>
+                        <div class="map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.35196272633!2d-73.97950600000001!3d40.697141499999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1744034628870!5m2!1sen!2s"
+                                width="600" height="270" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-grid">
+                    <div class="card-grid-1">
+                        <div class="bookings">
+                            <span class="material-icons chair">
+                                chair
+                            </span>
+                            <div class="title-value">
+                                <p class="light card-title">Bookings</p>
+                                <p class="dark card-value">184</p>
+                            </div>
+                        </div>
+                        <hr class="light">
+                        <div class="warning">
+                            <span class="material-icons light card-1-icon">
+                                warning
+                            </span>
+                            <p class="light card-info">Get more space</p>
+                        </div>
+                    </div>
+                    <div class="card-grid-1">
+                        <div class="bookings">
+                            <span class="material-icons leaderboard">
+                                leaderboard
+                            </span>
+                            <div class="title-value">
+                                <p class="light card-title website">Website Visits</p>
+                                <p class="dark card-value">75.521</p>
+                            </div>
+                        </div>
+                        <hr class="light">
+                        <div class="warning">
+                            <span class="material-icons light card-1-icon">
+                                local_offer
+                            </span>
+                            <p class="light card-info">Tracked from Google Analytics</p>
+                        </div>
+                    </div>
+                    <div class="card-grid-1">
+                        <div class="bookings">
+                            <span class="material-icons store">
+                                store
+                            </span>
+                            <div class="title-value">
+                                <p class="light card-title">Revenue</p>
+                                <p class="dark card-value value-3">$34,245</p>
+                            </div>
+                        </div>
+                        <hr class="light">
+                        <div class="warning">
+                            <span class="material-icons light card-1-icon">
+                                date_range
+                            </span>
+                            <p class="light card-info">Last 24 Hours</p>
+                        </div>
+                    </div>
+                    <div class="card-grid-1">
+                        <div class="bookings">
+                            <span class="material-icons public ">
+                                public
+                            </span>
+                            <div class="title-value">
+                                <p class="light card-title">Followers</p>
+                                <p class="dark card-value">+245</p>
+                            </div>
+                        </div>
+                        <hr class="light">
+                        <div class="warning">
+                            <span class="material-icons light card-1-icon">
+                                update
+                            </span>
+                            <p class="light card-info">Just updated</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="manage-listings">
+                    <p class="manage-p">Manage Listings</p>
+                    <div class="grid-cards">
+                        <div class="card-1">
+                            <input type="checkbox" id="image-animation">
+                            <label for="image-animation">
+                                <img src="images/card-1.jpeg" alt="" class="image" tabindex="0">
+                            </label>
+
+                            <div class="icon-buttons">
+                                <div class="tooltip"><span class="material-icons art">
+                                        art_track
+                                    </span><span class="custom-tooltip">View</span></div>
+                                <div class="tooltip"><span class="material-icons edit">
+                                        edit
+                                    </span><span class="custom-tooltip">Edit</span></div>
+                                <div class="tooltip"><span class="material-icons clear">
+                                        clear
+                                    </span><span class="custom-tooltip">Delete</span></div>
+
+                            </div>
+
+                            <div class="content">
+                                <div class="card-body">
+                                    <p class="titlee">Cozy 5 Stars Apartment</p>
+                                    <p class="card-text light">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                        Nesciunt, minima
+                                        accusantium delectus deserunt inventore nihil veniam commodi aut, ullam aliquam
+                                        suscipit modi eveniet, tempora tempore.
+                                    </p>
+                                    <hr>
+                                </div>
+                                <div class="card-footer">
+                                    <span>$899/night</span>
+                                    <div>
+                                        <span class="material-icons location light">
+                                            location_on
+                                        </span>
+                                        <span class="light location">Barcelona, Spain</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="card-2">
+                                <input type="checkbox" id="image-animation">
+                                <label for="image-animation">
+                                    <img src="images/card-2.jpeg" alt="" class="image" tabindex="0">
+                                </label>
+
+                                <div class="icon-buttons">
+                                    <div class="tooltip"><span class="material-icons art">
+                                            art_track
+                                        </span><span class="custom-tooltip">View</span></div>
+                                    <div class="tooltip"><span class="material-icons edit">
+                                            edit
+                                        </span><span class="custom-tooltip">Edit</span></div>
+                                    <div class="tooltip"><span class="material-icons clear">
+                                            clear
+                                        </span><span class="custom-tooltip">Delete</span></div>
+
+                                </div>
+
+                                <div class="content">
+                                    <div class="card-body">
+                                        <p class="titlee">Office Studio</p>
+                                        <p class="card-text light">Lorem, ipsum dolor sit amet consectetur
+                                            adipisicing elit.
+                                            Nesciunt, minima
+                                            accusantium delectus deserunt inventore nihil veniam commodi aut, ullam
+                                            aliquam
+                                            suscipit modi eveniet, tempora tempore.
+                                        </p>
+                                        <hr>
+                                    </div>
+                                    <div class="card-footer">
+                                        <span>$1.119/night</span>
+                                        <div>
+                                            <span class="material-icons location light">
+                                                location_on
+                                            </span>
+                                            <span class="light location">London, UK</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                <div class="card-3">
+                                    <input type="checkbox" id="image-animation">
+                                    <label for="image-animation">
+                                        <img src="images/card-3.jpeg" alt="" class="image" tabindex="0">
+                                    </label>
+
+                                    <div class="icon-buttons">
+                                        <div class="tooltip"><span class="material-icons art">
+                                                art_track
+                                            </span><span class="custom-tooltip">View</span></div>
+                                        <div class="tooltip"><span class="material-icons edit">
+                                                edit
+                                            </span><span class="custom-tooltip">Edit</span></div>
+                                        <div class="tooltip"><span class="material-icons clear">
+                                                clear
+                                            </span><span class="custom-tooltip">Delete</span></div>
+
+                                    </div>
+
+                                    <div class="content">
+                                        <div class="card-body">
+                                            <p class="titlee">Beautiful Castle</p>
+                                            <p class="card-text light">Lorem, ipsum dolor sit amet consectetur
+                                                adipisicing elit.
+                                                Nesciunt, minima
+                                                accusantium delectus deserunt inventore nihil veniam commodi aut, ullam
+                                                aliquam
+                                                suscipit modi eveniet, tempora tempore.
+                                            </p>
+                                            <hr>
+                                        </div>
+                                        <div class="card-footer">
+                                            <span>$459/night</span>
+                                            <div>
+                                                <span class="material-icons location light">
+                                                    location_on
+                                                </span>
+                                                <span class="light location">Milan, Italy</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            
+                        
+            </main>
+            <footer>
+                <hr class="light">
+                <div class="footer-card">
+                    <div class="footer">
+                        <span>HOME</span>
+                        <span>COMPANY</span>
+                        <span>PORTFOLIO</span>
+                        <span>BLOG</span>
+                    </div>
+                    <div>
+                        <p class="dark">&copy; John Doe,2023</p>
+                    </div>
+                </div>
+
+            </footer>
+        </div>
     </div>
 
 </body>
