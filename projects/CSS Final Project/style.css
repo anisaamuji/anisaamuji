@@ -555,7 +555,9 @@ input[type=checkbox]:checked~.icon-buttons {
     padding-left: 40px;
     white-space: nowrap;
 }
-
+.titlee-2{
+    padding-left: 80px;
+}
 .card-text {
     font-size: 15px;
     text-align: center;
