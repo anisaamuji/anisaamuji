@@ -555,9 +555,11 @@ input[type=checkbox]:checked~.icon-buttons {
     padding-left: 40px;
     white-space: nowrap;
 }
-.titlee-2{
+
+.titlee-2 {
     padding-left: 80px;
 }
+
 .card-text {
     font-size: 15px;
     text-align: center;
@@ -605,4 +607,14 @@ footer {
     gap: 20px;
     padding: 10px 0;
     font-weight: bold;
+}
+@media (max-width: 992px) {
+    .grid-cards{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (max-width: 600px){
+    .grid-cards{
+        grid-template-columns: 1fr;
+    }
 }
