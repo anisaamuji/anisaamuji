@@ -242,7 +242,7 @@ header .material-icons {
     width: 250px;
 }
 
-.notification-wrapper:hover .display {
+.notification-wrapper:active .display {
     display: block;
     padding-left: 5px;
     padding-right: 5px;
@@ -284,6 +284,7 @@ main {
 }
 
 .global {
+    box-shadow: 0px 0px 21px -7px rgba(35, 1, 35, 1);
     position: absolute;
     background-color: green;
     color: var(--color-secondary);
@@ -380,6 +381,7 @@ table img {
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0px 0px 21px -7px rgba(35, 1, 35, 1);
 }
 
 .leaderboard {
@@ -392,6 +394,7 @@ table img {
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0px 0px 21px -7px rgba(35, 1, 35, 1);
 }
 
 .store {
@@ -404,11 +407,13 @@ table img {
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0px 0px 21px -7px rgba(35, 1, 35, 1);
 }
 
 .public {
     position: absolute;
     background-color: dodgerblue;
+    box-shadow: 0px 0px 21px -7px rgba(35, 1, 35, 1);
     color: var(--color-secondary);
     height: 60px;
     width: 60px;
@@ -468,9 +473,7 @@ table img {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 50px;
-}
-
-
+} 
 .location {
     font-size: 13px;
     text-align: center;
@@ -608,13 +611,15 @@ footer {
     padding: 10px 0;
     font-weight: bold;
 }
+
 @media (max-width: 992px) {
-    .grid-cards{
-        grid-template-columns: repeat(2,1fr);
+    .grid-cards {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
-@media (max-width: 600px){
-    .grid-cards{
+
+@media (max-width: 600px) {
+    .grid-cards {
         grid-template-columns: 1fr;
     }
 }
