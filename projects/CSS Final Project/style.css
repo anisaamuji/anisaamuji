@@ -454,7 +454,7 @@ table img {
 }
 
 .card-info {
-    margin-top: 0px;
+    margin-top: 0;
     text-align: center;
 }
 
@@ -473,7 +473,8 @@ table img {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 50px;
-} 
+}
+
 .location {
     font-size: 13px;
     text-align: center;
@@ -493,7 +494,7 @@ table img {
     border-radius: 8px;
 }
 
-.image {
+.card-image {
     height: 180px;
     width: 270px;
     margin-top: -25px;
@@ -621,5 +622,14 @@ footer {
 @media (max-width: 600px) {
     .grid-cards {
         grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .card-body {
+        text-align: left;
+    }
+
+    .image {
+        height: auto;
     }
 }
