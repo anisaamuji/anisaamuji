@@ -585,10 +585,11 @@ table img {
     border-bottom: 1px solid grey;
     margin-bottom: -2px;
 }
-
-.card-text,
-.titlee {
-    margin-top: -50px;
+#second-card-hr{
+    margin-bottom: -25px;
+}
+.footer-card-3,#second-card-hr{
+    margin-top: 25px;
 }
 
 .card-footer {
@@ -601,7 +602,8 @@ table img {
 }
 
 .location-icon {
-    margin-right: 4px;
+    margin-right: -5px;
+    text-align: center;
 }
 
 footer {
