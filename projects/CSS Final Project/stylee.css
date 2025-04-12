@@ -191,6 +191,7 @@ header .material-icons {
 .tooltip:hover .custom-tooltip,
 .tooltip:focus .custom-tooltip {
     opacity: 1;
+    transition: opacity 0.5s ease;
 }
 
 .search-box {
@@ -259,6 +260,9 @@ header .material-icons {
     padding: 10px;
     font-size: var(--font-size);
   }
+.bell:hover .notification{
+    visibility: visible;
+}
 
 .notification-wrapper:focus .notification-dropdown {
     display: block;
@@ -266,9 +270,8 @@ header .material-icons {
 }
 
 .notification {
-    z-index: 999;
+    z-index: 99;
 }
-
 li {
     padding: 10px 14px;
 }
