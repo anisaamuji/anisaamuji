@@ -8,7 +8,7 @@
     </link>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     </link>
-    <link rel="stylesheet" href="stylee.css">
+    <link rel="stylesheet" href="style.css">
     </link>
     <title>CP CoolPage</title>
 </head>
@@ -124,7 +124,7 @@
             <div class="header-layout">
                 <header>
                     <div class="left-header">
-                        <div class="tooltip">
+                        <div class="tooltip see-more-hidden">
                             <span class="material-icons light" title="" data-tooltip="See More" id="dashboard-icon">
                                 more_vert
                             </span>
@@ -132,6 +132,7 @@
                         </div>
 
                         <p class="dark">Dashboard</p>
+
                     </div>
                     <div class="right-header">
                         <div class="search-box" tabindex="0">
@@ -143,8 +144,8 @@
                             </div>
 
                         </div>
-                        <div class="tooltip">
-                            <span class="material-icons more-dark" title="" data-tooltip="Dashboard">
+                        <div class="tooltip dashboard">
+                            <span class="material-icons more-dark " title="" data-tooltip="Dashboard">
                                 dashboard
                             </span>
 
@@ -166,16 +167,20 @@
                                     <li>Another notification</li>
                                 </ul>
                             </div>
-
-
                         </div>
-                        <div class="tooltip">
-                            <span class="material-icons more-dark" title="" data-tooltip="Profile">
+                        <div class="tooltip profile-hidden">
+                            <span class="material-icons more-dark " title="" data-tooltip="Profile">
                                 person
                             </span>
                             <span class="custom-tooltip">Profile</span>
                         </div>
+                        <div class="tooltip">
 
+                            <span class="material-icons menu" title="" data-tooltip="Menu" id="menu">
+                                dehaze
+                            </span>
+                            <span class="custom-tooltip" id="menu">Menu</span>
+                        </div>
 
                     </div>
                 </header>
@@ -193,33 +198,33 @@
                             <table>
                                 <tr>
                                     <td><img src="images/usa.png" alt="" class="table-img"> USA</td>
-                                    <td>2,920</td>
-                                    <td>53.23%</td>
+                                    <td class="info-table">2,920</td>
+                                    <td class="info-table">53.23%</td>
                                 </tr>
                                 <tr>
                                     <td> <img src="images/germany.png" alt="" class="table-img">Germany</td>
-                                    <td>1,300</td>
-                                    <td>4.34%</td>
+                                    <td class="info-table">1,300</td>
+                                    <td class="info-table">4.34%</td>
                                 </tr>
                                 <tr>
                                     <td><img src="images/as.png" alt="" class="table-img">Australia</td>
-                                    <td>760</td>
-                                    <td>20.43%</td>
+                                    <td class="info-table">760</td>
+                                    <td class="info-table">20.43%</td>
                                 </tr>
                                 <tr>
                                     <td><img src="images/uk.png" alt="" class="table-img">United Kingdom</td>
-                                    <td>690</td>
-                                    <td>10.35%</td>
+                                    <td class="info-table value-table">690</td>
+                                    <td class="info-table">10.35%</td>
                                 </tr>
                                 <tr>
                                     <td><img src="images/romania.png" alt="" class="table-img">Romania</td>
-                                    <td>600</td>
-                                    <td>7.87%</td>
+                                    <td class="info-table">600</td>
+                                    <td class="info-table">7.87%</td>
                                 </tr>
                                 <tr>
                                     <td> <img src="images/brasil.png" alt="" class="table-img">Brazil</td>
-                                    <td>550</td>
-                                    <td>5.94%</td>
+                                    <td class="info-table">550</td>
+                                    <td class="info-table">5.94%</td>
                                 </tr>
                             </table>
 
@@ -240,7 +245,7 @@
                                 chair
                             </span>
                             <div class="title-value">
-                                <p class="light card-title">Bookings</p>
+                                <p class="light card-title bookings-title ">Bookings</p>
                                 <p class="dark card-value">184</p>
                             </div>
                         </div>
@@ -258,7 +263,7 @@
                                 leaderboard
                             </span>
                             <div class="title-value">
-                                <p class="light card-title website">Website Visits</p>
+                                <p class="light card-title website" id="website">Website Visits</p>
                                 <p class="dark card-value">75.521</p>
                             </div>
                         </div>
@@ -276,7 +281,7 @@
                                 store
                             </span>
                             <div class="title-value">
-                                <p class="light card-title">Revenue</p>
+                                <p class="light card-title revenue-title">Revenue</p>
                                 <p class="dark card-value value-3">$34,245</p>
                             </div>
                         </div>
@@ -294,7 +299,7 @@
                                 public
                             </span>
                             <div class="title-value">
-                                <p class="light card-title">Followers</p>
+                                <p class="light card-title followers-title">Followers</p>
                                 <p class="dark card-value">+245</p>
                             </div>
                         </div>
@@ -337,8 +342,8 @@
                             </div>
 
                             <div class="content">
-                                <div class="card-body">
-                                    <p class="title-card">Cozy 5 Stars Apartment</p>
+                                <div class="card-body first-card">
+                                    <p class="title-card title-of-card-1">Cozy 5 Stars Apartment</p>
                                     <p class="card-text light">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                                         Nesciunt, minima
                                         accusantium delectus deserunt inventore nihil veniam commodi aut, ullam aliquam
