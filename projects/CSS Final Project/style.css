@@ -835,6 +835,9 @@ footer {
     .map iframe {
         width: 100%;
     }
+    .card-header p{
+        width: 261px;
+    }
 
     .icons-image:hover .icons {
         opacity: 1;
