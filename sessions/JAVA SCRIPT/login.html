@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        let username = prompt(`Enter your username:`);
-        let password = prompt(`Enter your password:`);
-        if (username == 'admin' && password ==`12341234`){
-            console.log(`Welcome admin!`) 
+        let username = `admin`;
+        let password = `12341234`;
+        let email = `admin@gmail.com`;
+
+        let input = prompt('Enter your username:');
+        let emailInput = prompt('Enter your email:')
+        let pwInput = prompt('Enter your password:');
+
+        if ((input == username || emailInput == email) && pwInput == password){
+            console.log(`Welcome,admin!`)
         }
-        if (username == 'admin' || password ==`12341234`){
-            console.log(`Welcome admin!`) 
+        else{
+            console.log('Please,try again!');
         }
 
-        else{(username !== 'admin' || password !==`12341234`)
-
-            console.log(`Please,try again`)
-        }
-            
-    
     </script>
 </body>
+
 </html>
