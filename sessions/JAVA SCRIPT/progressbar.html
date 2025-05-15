@@ -1,11 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vertical Progress Bar</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: sans-serif;
+    }
+
+    .progress-bar-container {
+      text-align: center;
+    }
+
+    .indicator {
+      font-family: monospace;
+      font-size: 1rem;
+      color: grey;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      display: block;
+    }
+
+    .progress-bar-wrapper {
+      position: relative;
+      width: 40px;
+      height: 300px;
+      background-color: rgb(221, 221, 221);
+      border-radius: 8px;
+      overflow: hidden;
+      margin: 0 auto;
+    }
+
+    .progress-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0%;
+      transition: height 0.5s ease;
+    }
+
+    .progress-bar:hover::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: black;
+      color: white;
+      padding: 4px 8px;
+      font-size: 0.75rem;
+      white-space: nowrap;
+      margin-bottom: 6px;
+    }
+  </style>
 </head>
 <body>
-    
+
+  <div class="progress-bar-container">
+    <span class="indicator">0%</span>
+    <div class="progress-bar-wrapper">
+      <div id="bar" class="progress-bar" data-tooltip=""></div>
+    </div>
+    <span class="indicator">100%</span>
+  </div>
+
+  <script>
+    let percentage = parseInt(prompt(`What is the progress?`));
+
+    if (isNaN(percentage) || percentage < 0 || percentage > 100) {
+      throw new Error(`Write a valid percentage between 0 and 100`);
+    }
+
+    let color;
+
+    if (percentage <= 20) {
+      color = 'darkred';
+    } else if (percentage <= 50) {
+      color = 'orange';
+    } else if (percentage > 50 <= 80) { 
+      color = 'yellow';
+    } else {
+      color = 'green';
+    }
+
+    let bar = document.getElementById(`bar`);
+    bar.style.height = percentage + `%`;
+    bar.style.backgroundColor = color;
+    bar.setAttribute('data-tooltip', percentage + `%`);
+
+    document.querySelector(`.indicator`).textContent = percentage + `%`;
+  </script>
+
 </body>
 </html>
