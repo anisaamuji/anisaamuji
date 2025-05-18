@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let numbers = parseInt(prompt(`Write the numbers from 1 to 100`));
+
+        if (isNaN(numbers) || numbers < 1 || numbers > 100) {
+            console.log(`Write a valid number!`)
+        }
+        else {
+            let nr = 1;
+            while (nr <= numbers) {
+                console.log(nr)
+                nr++;
+            }
+
+            let result1 = ``;
+            nr = 1;
+            while (nr <= numbers) {
+                result1 += nr + ``;
+                nr++;
+            }
+            console.log(result1.trim());
+            let result2 = ``;
+            nr = 1;
+            while (nr <= numbers) {
+                if (nr === numbers) {
+                    result2 += nr; 
+                } else {
+                    result2 += nr + ``, ``;
+                }
+                nr++;
+            }
+            console.log(result2);
+        }
+
+    </script>
+</body>
+
+</html>

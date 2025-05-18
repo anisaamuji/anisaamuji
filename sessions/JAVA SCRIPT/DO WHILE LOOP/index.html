@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const userPassword = '12341234';
+        let tries = 3;
+
+        do {
+            let guesses = prompt('Enter the password. ${tries} ${tries == 1 ? 'try' : 'tries'} left:')
+            if(guesses == userPassword){
+                console.log('Welcome!')
+            }
+        }
+        while (tryOfPass < 3) {
+            console.log(userPassword);
+            tryOfPass++;
+        }
+        if (userPassword !== '12341234'){
+            alert(`Password is incorrect`)
+            break
+        }
+    </script>
+</body>
+
+</html>
