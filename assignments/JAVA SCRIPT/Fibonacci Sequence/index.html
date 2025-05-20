@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let input = prompt(`Enter how many Fibonacci numbers to generate:`);
+        let x = parseInt(input);
+
+       if (isNaN(x) || x <= 0) {
+            console.log(`Please enter a valid positive integer!`)
+        }
+        else {
+            console.log(`First` + x + `numbers in the Fibonacci sequence:`);
+            let fibonacci1 = 1, fibonacci2 = 1;
+
+            for (let i = 1; i <= x; i++) {
+                if (i === 1 || i === 2) {
+                    console.log(1);
+                } 
+                else {
+                    let next = fibonacci1 + fibonacci2;
+                    console.log(next);
+                    fibonacci1 = fibonacci2;
+                    fibonacci2 = next;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

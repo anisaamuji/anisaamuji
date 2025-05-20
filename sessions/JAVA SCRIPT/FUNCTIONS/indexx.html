@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function printHelloWorld() {
+            let text = `Hello World`;
+            console.log(text)
+        }
+        for (i = 0; i < 10; i++) {
+            printHelloWorld();
+        }
+
+
+        function stringParam(text) {
+            console.log(text);
+        }
+        stringParam(`Anisa Muji!`)
+
+        function kmToMiles(km) {
+            const miles = km * 0.621371;
+            return miles;
+        }
+        console.log(kmToMiles(10))
+        function areaCircle(radius) {
+            return 3.14 * radius * radius;
+        }
+        console.log(areaCircle(3))
+
+        function welcomeMsg(name, surname) {
+            return `Welcome, ${name} ${surname}`;
+        }
+        let welcome = welcomeMsg(`Anisa`, `Muji`);
+        console.log(welcome);
+
+
+        function isWorkingCitizen(age) {
+            return age >= 18 && age < 65;
+        }
+        console.log(isWorkingCitizen(30));
+        console.log(isWorkingCitizen(70));
+
+
+        function isEven(number) {
+            return number % 2 === 0;
+        }
+        console.log(isEven(4));
+        console.log(isEven(7));
+
+
+        printHelloWorld();
+        stringParam(`This is a msg!`);
+        console.log(kmToMiles(7));
+        console.log(areaCircle(5));
+        console.log(welcomeMsg(`Liberta`, `Veliu`));
+        console.log(isWorkingCitizen(27));
+        console.log(isEven(17));
+    </script>
+</body>
+
+</html>

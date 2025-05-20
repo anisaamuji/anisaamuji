@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function hailstoneSequence(start) {
+            let num = start;
+            console.log(num);
+            for (; ;) {
+            if (num === 1) break;
+            if (num % 2 === 0) {
+                num = num / 2;
+            }
+            else {
+                num = num * 3 + 1;
+            }
+            console.log(num);
+        }
+        }
+
+        
+
+        let input = prompt(`Enter a positive integer:`);
+        let number = parseInt(input);
+        if (isNaN(number) || number <= 0) {
+            console.log(`Please write a valid positive integer!`)
+        }
+        else {
+            console.log(` Hailstone sequence starting from ` + number + `:`);
+            hailstoneSequence(number);
+        }
+    </script>
+</body>
+
+</html>
