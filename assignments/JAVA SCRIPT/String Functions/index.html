@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let text = `  hello,dolly! `
+        let trimmed = text.trim();
+        let str = `  hello,dolly!`;
+        let index = text.indexOf(`h`);
+
+        if (index !== -1) {
+            text = text.slice(0, index) + text.charAt(index).toUpperCase() + text.slice(index + 1);
+        }
+        alert(text);
+        let time = '05:36 PM';
+        let hourStr = time.slice(0, 2);
+        let minuteStr = time.slice(3, 5);
+        let meridian = time.slice(-2);
+        let hour = parseInt(hourStr, 10);
+        let minutes = parseInt(minuteStr, 10);
+
+        alert(hour);
+        alert(minutes);
+        alert(meridian);
+
+        let input = `Prishtina, 50°F`;
+        let commaIndex = input.indexOf(`,`);
+        let city = input.slice(0, commaIndex).trim();
+        let tempPart = input.slice(commaIndex + 1).trim();
+        let temp = parseInt(tempPart, 10);
+        console.log(city);
+        console.log(temp);
+    </script>
+</body>
+
+</html>

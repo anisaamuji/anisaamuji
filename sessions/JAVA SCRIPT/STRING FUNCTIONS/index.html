@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let sum = 0;
+        setTimeout(question1, 3000)
+        function question1() {
+            let answer = prompt(`Sa eshte 2 + 3 \n1) 3 \n2) 5 \n3) 7`)
+            if (answer === `2`) {
+                alert(`Correct! +5 points`);
+                sum += 5;
+            }
+
+        }
+        setTimeout(question2, 3000)
+
+        function question2() {
+            let answer = prompt(`Sa eshte 3 * 3 \n1) 8 \n2) 10 \n3) 9`)
+            if (answer === `3`) {
+                alert(`Correct! +5 points`);
+                sum += 5;
+            }
+        }
+        setTimeout(question3, 3000)
+
+        function question3() {
+            let answer = prompt(`Sa eshte 3 / 3 \n1) 1 \n2) 0 \n3) 4`)
+            if (answer === `1`) {
+                alert(`Correct! +5 points`);
+                sum += 5;
+            }
+        }
+        setTimeout(question4, 3000)
+
+        function question4() {
+            let answer = prompt(`Sa eshte 5 * 3 \n1) 19 \n2) 20 \n3) 15`)
+            if (answer === `3`) {
+                alert(`Correct! +5 points`);
+                sum += 5;
+            }
+        }
+        question1()
+        question2()
+        question3()
+        question4()
+        alert(`Your points are:` + sum + `from 20 points`)
+
+
+
+
+    </script>
+</body>
+
+</html>

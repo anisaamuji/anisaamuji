@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function msg() {
+            let text = `Pershendetje Anisa`
+            console.log(text)
+        }
+        msg()
+
+
+        function doubleNumber(a) {
+            let multiplication = a * 2;
+            console.log(multiplication)
+        }
+        doubleNumber(4)
+
+        function sumNr(a, b) {
+            let sum = a + b;
+            console.log(sum)
+        }
+        sumNr(4, 5)
+
+        function gjatesiaElibrit(fjala) {
+            let gjatesia = fjala.length;
+            console.log(gjatesia)
+        }
+        gjatesiaElibrit(`libër`)
+
+        function time() {
+            let timee = parseInt(prompt('Enter time:'));
+            if (isNaN(timee) || timee < 0 || timee > 24) {
+                console.log("Ju lutem jepni një orë të vlefshme (0 - 24).");
+            }
+            else if (timee >= 0 && timee <= 12) {
+                console.log(`miremengjes`)
+            }
+            else if (timee > 12 && timee <= 18) {
+                console.log(`miredita`)
+            }
+            else {
+                console.log(`mirembrema`)
+            }
+        }
+        time()
+        
+    </script>
+</body>
+
+</html>
