@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Room Calculator</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #eef;
+      padding: 20px;
+      text-align: center;
+    }
+    #output {
+      margin-top: 30px;
+      font-size: 1.2em;
+      background-color: #4682b4;
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Room Area & Perimeter Calculator</h2>
+
+<div id="output"></div>
+
+<script>
+  function getValidNumber(promptText) {
+    let num;
+    do {
+      const input = prompt(`${promptText}`);
+      num = parseFloat(input);
+      if (isNaN(num) || num <= 0) {
+        alert(`Please enter a valid positive number.`);
+      }
+    } while (isNaN(num) || num <= 0);
+    return num;
+  }
+
+  function calculateArea(width, length) {
+    return (width * length).toFixed(2);
+  }
+
+  function calculatePerimeter(width, length) {
+    return (2 * (width + length)).toFixed(2);
+  }
+
+  const width = getValidNumber(`Enter the width of your room (in meters):`);
+  const length = getValidNumber(`Enter the length of your room (in meters):`);
+
+  const area = calculateArea(width, length);
+  const perimeter = calculatePerimeter(width, length);
+
+  const output = document.getElementById(`output`);
+  output.innerHTML = `
+    <strong>Room Dimensions</strong><br><br>
+    Width: ${width} m<br>
+    Length: ${length} m<br><br>
+    Area: ${area} m²<br>
+    Perimeter: ${perimeter} m
+  `;
+</script>
+
+</body>
+</html>

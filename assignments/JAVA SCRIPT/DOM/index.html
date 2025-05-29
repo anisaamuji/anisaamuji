@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn">Click here</button>
+    <p>Hello</p>
+    <p>Hi</p>
+    <script>
+        let myBtn = document.getElementById(`btn`);
+        myBtn.style.backgroundColor = `green`;
+        myBtn.style.color = `white`;
+        myBtn.textContent = `Welcome`;
+        let paragraph = document.querySelector(`p`);
+        paragraph.style.backgroundColor = `pink`;
+
+        let heading = document.createElement('h1');
+        heading.innerHTML = 'Hello I am a heading added dunamicly by <i>JS </i>.'
+        document.body.appendChild(heading);
+
+
+
+        const newDiv = document.createElement('div');
+
+
+        const newHeading = document.createElement('h1');
+        newHeading.textContent = 'This is a heading';
+
+        const newParagraph = document.createElement('p');
+        newParagraph.textContent = 'This is a paragraph.';
+
+        newDiv.appendChild(newHeading);
+        newDiv.appendChild(newParagraph);
+
+        document.body.appendChild(newDiv);
+    </script>
+</body>
+
+</html>

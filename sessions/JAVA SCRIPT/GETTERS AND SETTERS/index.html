@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let circle = {
+            radius: `3`,
+            getRadius: function () {
+                return this.radius;
+            },
+            setRadius: function(r) {
+                this.radius = r;
+            },
+            getArea: function(){
+            return  this.getArea
+        },
+        getPerimeter: function(){
+            return this.getPerimeter
+        },
+        center: let = {
+            x: `3`,
+            y:`5`
+        },
+        getCenter() {
+    return this.getCenter;
+  },
+  setCenter(x, y) {
+    this.setCenter = { x, y };
+  },
+  grow(amount) {
+    if (amount > 0) {
+      this.radius += amount;
+    } else {
+      console.error(`Amount must be positive`);
+    }
+  },
+
+  shrink(amount) {
+    if (amount > 0 && this.radius - amount > 0) {
+      this.radius -= amount;
+    } else {
+      console.error(`Invalid shrink amount`);
+    }
+  },
+  printDetails() {
+    console.log(`Circle details:`);
+    console.log(`Radius: ${this._radius}`);
+    console.log(`Center: (${this._center.x}, ${this._center.y})`);
+    console.log(`Area: ${this.getArea().toFixed(2)}`);
+    console.log(`Perimeter: ${this.getPerimeter().toFixed(2)}`);
+  },
+  equals(otherCircle) {
+    return (
+      this.radius === otherCircle.radius &&
+      this.center.x === otherCircle.center.x &&
+      this.center.y === otherCircle.center.y
+    )
+  }
+        }
+
+        
+        
+        
+        console.log(circle.getRadius());
+        circle.setRadius(5);
+        console.log(circle.getRadius());
+        circle.getArea();
+        circle.radius = 5;
+circle.setCenter(10, 20);
+circle.grow(2);
+circle.shrink(1);
+circle.printDetails();
+
+const anotherCircle = {
+  radius: 6,
+  center: { x: 10, y: 20 }
+};
+
+console.log("Are they equal?", circle.equals(anotherCircle)); 
+        
+    </script>
+</body>
+</html>
