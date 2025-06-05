@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Offline Notification</title>
+  <style>
+    #offline-popup {
+      display: none;
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgb(255, 77, 77);
+      color: white;
+      padding: 16px 24px;
+      border-radius: 8px;
+      font-family: sans-serif;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      z-index: 1000;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; top: 0; }
+      to { opacity: 1; top: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="offline-popup">You are offline, please wait until you are reconnected!</div>
+
+  <script>
+    const popup = document.getElementById('offline-popup');
+
+    function showPopup() {
+      popup.style.display = 'block';
+    }
+
+    function hidePopup() {
+      popup.style.display = 'none';
+    }
+
+    window.addEventListener('offline', showPopup);
+    window.addEventListener('online', hidePopup);
+
+    if (!navigator.onLine) {
+      showPopup();
+    }
+  </script>
+
+</body>
+</html>

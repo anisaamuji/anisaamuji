@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Click to Create Boxes</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background-color: rgba(245, 245, 245, 0.781);
+      overflow: hidden;
+    }
+
+    .box {
+      width: 60px;
+      height: 60px;
+      border:1px solid black;
+      position: fixed;
+      transform-origin: center center;
+      cursor: grab;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: box-shadow 0.2s ease;
+    }
+
+    .box:active {
+      cursor: grabbing;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+
+<script>
+  let currentBox = null;
+  let offsetX = 0;
+  let offsetY = 0;
+
+  document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('box')) return;
+
+    const box = document.createElement('div');
+    box.className = 'box';
+
+    const angle = Math.random() * 360;
+    box.style.left = `${e.clientX - 30}px`;
+    box.style.top = `${e.clientY - 30}px`;
+    box.style.transform = `rotate(${angle}deg)`;
+
+    box.addEventListener('mousedown', (ev) => {
+      currentBox = box;
+      offsetX = ev.clientX - box.getBoundingClientRect().left;
+      offsetY = ev.clientY - box.getBoundingClientRect().top;
+    });
+
+    document.body.appendChild(box);
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (currentBox) {
+      currentBox.style.left = `${e.clientX - offsetX}px`;
+      currentBox.style.top = `${e.clientY - offsetY}px`;
+    }
+  });
+
+  document.addEventListener('mouseup', () => {
+    currentBox = null;
+  });
+</script>
+
+</body>
+</html>
