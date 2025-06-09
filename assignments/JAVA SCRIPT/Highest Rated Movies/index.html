@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .first-card {
+            margin: 20px;
+            width: 300px;
+            height: 400px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(223, 86, 86, 0.7)), url(download.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+            padding: 25px 30px;
+            color: white;
+            text-align: center;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            animation: popIn 1s ease;
+        }
+
+        .first-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 50px rgba(255, 255, 255, 0.3);
+        }
+
+        h1 {
+            font-size: 35px;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        p {
+            font-size: 20px;
+            font-weight: bolder;
+            margin: 5px 0;
+            color: rgb(224, 224, 224);
+            opacity: 0;
+            animation: fadeUp 0.8s ease forwards;
+        }
+
+        .first-card p:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .first-card p:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 12px;
+            opacity: 0;
+            animation: fadeUp 1s ease forwards;
+            animation-delay: 0.8s;
+        }
+
+        li {
+            font-size: 15px;
+            margin-bottom: 6px;
+            transition: transform  0.3s ease, color 0.3s ease;
+        }
+
+        .first-card li:hover {
+            transform: scale(1.1);
+            color: rgb(247, 11, 11);
+        }
+
+        @keyframes fadeUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes popIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .second-card,
+        .third-card,
+        .fourth-card,
+        .fifth-card {
+            margin: 20px;
+            width: 300px;
+            height: 400px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+            padding: 25px 30px;
+            color: white;
+            text-align: center;
+        }
+
+        .second-card {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(141, 223, 86, 0.7)), url(download\ \(1\).jpeg);
+        }
+
+        .third-card {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(223, 168, 86, 0.7)), url(download\ \(2\).jpeg);
+        }
+
+        .fourth-card {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(86, 191, 223, 0.7)), url(download\ \(3\).jpeg);
+
+        }
+
+        .fifth-card {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(53, 49, 49, 0.7)), url(download\ \(4\).jpeg);
+        }
+        .first{
+             background: linear-gradient(90deg, #ffe53b, #ff2525);
+             padding: 10px;
+            margin: 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="first-card">
+        <h1>'The Godfather'</h1>
+        <p>1972</p>
+        <p>9.2</p>
+        <ul>
+            <li>Marlon Brando</li>
+            <li>Al Pacino</li>
+            <li>James Caan</li>
+        </ul>
+    </div>
+    <div class="second-card">
+        <h1>'The Shawshank Redemption'</h1>
+        <p>1994</p>
+        <p>9.3</p>
+        <ul>
+            <li>Tim Robbins</li>
+            <li>Morgan Freeman</li>
+            <li>Bob Gunton</li>
+        </ul>
+    </div>
+    <div class="third-card">
+        <h1>'Pulp Fiction'</h1>
+        <p>1994</p>
+        <p>8.9</p>
+        <ul>
+            <li>John Travolta</li>
+            <li>Uma Thurman</li>
+            <li>Samuel L. Jackson</li>
+        </ul>
+    </div>
+    <div class="fourth-card">
+        <h1>'Forrest Gump'</h1>
+        <p>1994</p>
+        <p>8.8</p>
+        <ul>
+            <li>Tom Hanks</li>
+            <li>Robin Wright</li>
+            <li>Gary Sinise</li>
+        </ul>
+    </div>
+    <div class="fifth-card">
+        <h1>'The Dark Knight'</h1>
+        <p>2008</p>
+        <p>9.0</p>
+        <ul>
+            <li>Christian Bale</li>
+            <li>Heath Ledger</li>
+            <li>Aaron Eckhart</li>
+        </ul>
+    </div>
+    <div class="first">
+        <h1>THE FIRST IS "THE GODFATHER"!</h1>
+    </div>
+    <script>
+        let movies = [
+            {
+                name: 'The Godfather',
+                releaseYear: 1972,
+                rating: 9.2,
+                mainActors: ['Marlon Brando', 'Al Pacino', 'James Caan']
+            },
+            {
+                name: 'The Shawshank Redemption',
+                releaseYear: 1994,
+                rating: 9.3,
+                mainActors: ['Tim Robbins', 'Morgan Freeman', 'Bob Gunton']
+            },
+            {
+                name: 'Pulp Fiction',
+                releaseYear: 1994,
+                rating: 8.9,
+                mainActors: ['John Travolta', 'Uma Thurman', 'Samuel L. Jackson']
+            },
+            {
+                name: 'The Dark Knight',
+                releaseYear: 2008,
+                rating: 9.0,
+                mainActors: ['Christian Bale', 'Heath Ledger', 'Aaron Eckhart']
+            },
+            {
+                name: 'Forrest Gump',
+                releaseYear: 1994,
+                rating: 8.8,
+                mainActors: ['Tom Hanks', 'Robin Wright', 'Gary Sinise']
+            }
+        ];
+        let sortMethodByYear = [1994, 2008, 1994, 1994, 1972];
+        sortMethodByYear.sort((a, b) => a - b);
+        console.log(sortMethodByYear)
+    </script>
+</body>
+
+</html>
