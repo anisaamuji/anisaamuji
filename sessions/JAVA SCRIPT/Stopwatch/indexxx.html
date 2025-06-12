@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: black;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .stopwatch {
+      font-size: 80px;
+      letter-spacing: 2px;
+      margin-bottom: 40px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 20px;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    #startBtn {
+      background-color: greenyellow;
+      color: black;
+    }
+
+    #stopBtn {
+      background-color: red;
+      color: white;
+    }
+
+    button:disabled {
+      opacity: 0.5;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="stopwatch" id="display">00:00,00</div>
+  <div class="buttons">
+    <button id="startBtn">Start</button>
+    <button id="stopBtn" disabled>Stop</button>
+  </div>
+
+  <script>
+    let display = document.getElementById('display');
+    let startBtn = document.getElementById('startBtn');
+    let stopBtn = document.getElementById('stopBtn');
+
+    let startTime = 0;
+    let interval;
+
+    function time(ms) {
+      let minutes = String(Math.floor(ms / 60000)).padStart(2, '0');
+      let seconds = String(Math.floor((ms % 60000) / 1000)).padStart(2, '0');
+      let hundredths = String(Math.floor((ms % 1000) / 10)).padStart(2, '0');
+      return `${minutes}:${seconds},${hundredths}`;
+    }
+
+    function start() {
+      startTime = Date.now();
+      interval = setInterval(() => {
+        let elapsed = Date.now() - startTime;
+        display.textContent = time(elapsed);
+      }, 10);
+      startBtn.disabled = true;
+      stopBtn.disabled = false;
+    }
+
+    function stop() {
+      clearInterval(interval);
+      startBtn.disabled = false;
+      stopBtn.disabled = true;
+    }
+
+    startBtn.addEventListener('click', start);
+    stopBtn.addEventListener('click', stop);
+  </script>
+
+</body>
+</html>

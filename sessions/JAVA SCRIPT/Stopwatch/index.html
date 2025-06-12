@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .timerBtn {
+            width: 80px;
+            height: 30px;
+            border: 3px solid;
+            border-radius: 12px;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        #timeDisplay {
+            font-size: 75px;
+            color: rgb(64, 196, 55);
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        #timeContainer {
+            text-align: center;
+            border: 3px solid;
+            border-radius: 25px;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="timeDisplay">00:00:00</div>
+    <button id="startBtn" class="timerBtn">Start</button>
+    <!-- <button id="pauseBtn" class="timerBtn">Pause</button> -->
+    <button id="stopBtn" class="timerBtn">Stop</button>
+    <script>
+        const timeDisplay = document.querySelector(`#timeDisplay`);
+        const startBtn = document.querySelector(`#startBtn`);
+        // const pauseBtn = document.querySelector(`#pauseBtn`);
+        const stopBtn = document.querySelector(`#stopBtn`);
+
+        let startTime = 0;
+        let elapsedTime = 0;
+        let currentTime = 0;
+        let paused = true;
+        let intervalid;
+        let hrs = 0;
+        let mins = 0;
+        let secs = 0;
+
+        startBtn.addEventListener(`click`, () => {
+            if (paused) {
+                paused = false;
+                startTime = Date.now() - elapsedTime;
+                intervalid = setInterval(updateTime, 75)
+            }
+        })
+        // pauseBtn.addEventListener(`click`, () => {
+        //     if (!paused) {
+        //         paused = true;
+        //         elapsedTime = Date.now() - startTime;
+        //         clearInterval(intervalid)
+        //     }
+        // })
+        stopBtn.addEventListener(`click`, () => {
+            paused = true;
+            startTime = 0;
+            elapsedTime = 0;
+            currentTime = 0;
+            intervalid;
+            hrs = 0;
+            mins = 0;
+            secs = 0;
+            timeDisplay.textContent = `00:00:00`;
+        })
+        function updateTime() {
+            elapsedTime = Date.now() - startTime;
+            secs = Math.floor((elapsedTime / 1000) % 60);
+            mins = Math.floor((elapsedTime / 1000 * 60) % 60);
+            hrs = Math.floor((elapsedTime / 1000 * 60 * 60) % 60);
+
+            secs = pad(secs);
+            mins = pad(mins);
+            hrs = pad(hrs);
+
+            timeDisplay.textContent = `${hrs}:${mins}:${secs}`;
+            function pad(unit) {
+                return ((`0`) + unit).length > 2 ? unit : `0` + unit;
+
+            }
+        }
+    </script>
+</body>
+
+</html>
