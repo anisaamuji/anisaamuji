@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(207, 237, 247);
+            margin: 25px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid rgb(170, 170, 170);
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: rgb(204, 204, 204);
+        }
+
+        button {
+            background-color: rgb(91, 91, 214);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        #best {
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Lista e Nxenesve</h1>
+    <table>
+        <tr>
+            <th>Emri</th>
+            <th>Nota</th>
+        </tr>
+        <tr id="students">
+            <td>Arta</td>
+            <td>9</td>
+        </tr>
+        <tr id="students">
+            <td>Bledi</td>
+            <td>6</td>
+        </tr>
+        <tr id="students">
+            <td>Dona</td>
+            <td>8</td>
+        </tr>
+        <tr id="students">
+            <td>Elton</td>
+            <td>7</td>
+        </tr>
+
+        <tr id="students">
+            <td>Fiona</td>
+            <td>10</td>
+        </tr>
+    </table>
+    <button>Gjej Nxenesin me te mire</button>
+    <p id="best"></p>
+    <script>
+        function findBestStudent() {
+            let table = document.getElementById(`students`);
+            let maxGrade = 0;
+            let bestStudent = ``;
+        }
+        let sortMethodByGrade = [9, 6, 8, 7, 10];
+        sortMethodByYear.sort((a, b) => b - a);
+        console.log(sortMethodByYear)
+
+        students.forEach((student) => {
+            console.log(student.sortMethodByGrade)
+        });
+
+
+
+
+    </script>
+</body>
+
+</html>

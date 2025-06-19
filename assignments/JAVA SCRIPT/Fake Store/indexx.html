@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            padding: 25px;
+            margin: 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        .underline {
+            text-decoration: underline red wavy;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            border: 1px solid rgb(238, 238, 238);
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            padding: 16px;
+            transition: transform 0.2s;
+            background-color: white;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+        }
+
+        #model {
+            display: none;
+            position: fixed;
+            z-index: 10;
+            padding-top: 80px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .content-products {
+            background-color: #fff;
+            margin: auto;
+            padding: 32px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 500px;
+            text-align: left;
+            position: relative;
+        }
+
+        .close-products {
+            font-size: 28px;
+            font-weight: bold;
+            position: absolute;
+            right: 20px;
+            top: 10px;
+            cursor: pointer;
+        }
+
+        .open-products img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: contain;
+            margin: 16px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>My <span class="underline">Ecommerce</span></h1>
+    <div class="container" id="container"></div>
+    <div id="model">
+        <div class="content-products" id="products">
+            <span class="close-products" id="close">&times;</span>
+            <div class="open-products" id="open"></div>
+        </div>
+    </div>
+
+    <script>
+        let container = document.getElementById(`container`);
+        let model = document.getElementById(`model`);
+        let openProductBox = document.getElementById(`open`);
+        let closeBtn = document.getElementById(`close`);
+
+        fetch('https://fakestoreapi.com/products')
+            .then(res => res.json())
+            .then(data => {
+                data.forEach(product => {
+                    const card = document.createElement('div');
+                    card.className = 'card';
+                    card.innerHTML = `
+            <img src="${product.image}" alt="${product.title}" />
+            <h3>${product.title}</h3>
+            <p><strong>Price:</strong> $${product.price}</p>
+            <p><strong>Rating:</strong> ${product.rating.rate}</p>
+          `;
+                    card.onclick = () => openProduct(product.id);
+                    container.appendChild(card);
+                });
+            });
+
+        function openProduct(id) {
+            fetch(`https://fakestoreapi.com/products/${id}`)
+                .then(res => res.json())
+                .then(product => {
+                    openProductBox.innerHTML = `
+            <h2>${product.title}</h2>
+            <img src="${product.image}" alt="${product.title}">
+            <p><strong>Category:</strong> ${product.category}</p>
+            <p><strong>Description:</strong> ${product.description}</p>
+            <p><strong>Price:</strong> $${product.price}</p>
+            <p><strong>Rating:</strong> ${product.rating.rate} (${product.rating.count} reviews)</p>
+          `;
+                    model.style.display = 'block';
+                });
+        }
+        closeBtn.onclick = () => {
+            model.style.display = 'none';
+        };
+
+        window.onclick = event => {
+            if (event.target === model) {
+                model.style.display = 'none';
+            }
+        };
+    </script>
+
+</body>
+
+</html>

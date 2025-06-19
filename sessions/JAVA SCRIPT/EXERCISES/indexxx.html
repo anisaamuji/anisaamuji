@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let playerOne = `rock`;
+        let computer = `paper`;
+
+        switch (playerOne) {
+            case computer:
+                console.log(`Tie game!`);
+                break;
+            case `rock`:
+                if (computer === `paper`) {
+                    console.log(`Computer wins!`);
+                }
+                else {
+                    console.log(`PlayerOne wins!`)
+                }
+                break;
+            case `paper`:
+                if (computer === 'scissors') {
+                    console.log(`computer wins!`)
+                } else {
+                    console.log(`playerOne wins!`);
+                }
+                break;
+            default:
+                if (computer === `rock`) {
+                    console.log(`computer wins!`);
+
+                } else {
+                    console.log(`playerOne wins!`);
+
+                }
+        }//detyra if else
+
+
+        let soup = `Chicken Noddle Soup`;//kur behet e padeklaruar eshte else
+        let response = soup ? `Yes,we have soup.` : `Sorry,no soup today.`
+        console.log(response);// if else me turnary operator
+
+        let testScore = 77;
+        let myGrade =
+            testScore > 89
+                ? `5`
+                : testScore > 79
+                ? `4`
+                : testScore > 69
+                ? `3`
+                : testScore > 59
+                ? `2`
+                : `1`;
+                console.log(`My test grade is a ${myGrade} `)//turnary operator
+        
+        let result = 
+        playerOne === computer
+        ? `Tie game!`
+        :playerOne === `rock` && computer === `paper`
+        ? `Computer wins!`
+        :playerOne === `paper` && computer === `scissors`
+        ? `Computer wins!`
+        :playerOne === `scissors` && computer === `rock`
+        ? `Computer wins!`
+        : `playerOne wins!`
+        console.log(result); //ternary operator excercise
+
+        function sum(num1, num2) {
+            return num1+ num2;
+        }
+        console.log(sum(5,7)); //ose kur nr2-undefined beje nr1 
+
+        function sum(num1, num2) {
+            if (num2 === undefined) {
+              return  num1+ num1;
+        }
+        return  num1+ num2;
+    }
+        console.log(sum(7)); 
+        
+        
+    </script>
+</body>
+
+</html>
